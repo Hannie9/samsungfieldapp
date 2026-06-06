@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samsung Field App - Shop Detail Demo Store Profile Staffing v20</title>
+  <!-- build: detail-demo-sales-v1-fixed-segment-dropdown-soft-chevron-store-profile-staffing-v20-no-detail-tabs-20260605 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --samsung-blue: #1428A0;
+      --blue-500: #2B5CFF;
+      --blue-soft: #EEF3FF;
+      --ink: #0B0B0F;
+      --text: #111111;
+      --muted: #6B7280;
+      --subtle: #9CA3AF;
+      --surface: #F4F6FA;
+      --card: #FFFFFF;
+      --line: rgba(0,0,0,.07);
+      --warning: #F59E0B;
+      --danger: #D92D20;
+      --success: #18A058;
+      --purple: #7C3AED;
+      --shadow-soft: 0 16px 45px rgba(0,0,0,.08);
+      --shadow-float: 0 24px 70px rgba(10,22,70,.16);
+      --font: "Be Vietnam Pro", Inter, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 75% 8%, rgba(20,40,160,.18), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #eef2f7 100%);
+      font-family: var(--font);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+      overflow: hidden;
+    }
+
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+
+    .phone {
+      width: 390px;
+      height: 844px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 42px;
+      background:
+        radial-gradient(circle at 86% 4%, rgba(20,40,160,.13), transparent 25%),
+        linear-gradient(180deg, #FFFFFF 0%, #F4F6FA 82%);
+      box-shadow: var(--shadow-float);
+      border: 10px solid #0D0D10;
+      isolation: isolate;
+    }
+
+    .phone::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 28px;
+      border-radius: 999px;
+      background: #0D0D10;
+      z-index: 40;
+    }
+
+    .screen {
+      height: 100%;
+      padding: 22px 18px 18px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .statusbar {
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: -.02em;
+      flex: 0 0 auto;
+    }
+
+    .signal { display: flex; align-items: center; gap: 5px; color: #111; }
+    .battery { width: 24px; height: 12px; border: 1.7px solid #111; border-radius: 4px; position: relative; }
+    .battery::before { content: ""; position: absolute; right: -4px; top: 3px; width: 2px; height: 5px; background: #111; border-radius: 2px; }
+    .battery::after { content: ""; position: absolute; left: 2px; top: 2px; width: 15px; height: 6px; border-radius: 2px; background: #111; }
+
+    .app-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+      flex: 0 0 auto;
+    }
+
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 16px;
+      background: #000;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -.04em;
+      box-shadow: 0 12px 24px rgba(0,0,0,.12);
+    }
+
+    .brand small { display: block; color: var(--muted); font-size: 11px; font-weight: 500; margin-bottom: 2px; }
+    .brand strong { display: block; font-size: 20px; letter-spacing: -.055em; line-height: 1; }
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at 70% 20%, rgba(0,212,255,.55), transparent 30%),
+        linear-gradient(135deg, var(--samsung-blue), var(--blue-500));
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 600;
+      border: 0;
+      box-shadow: 0 12px 26px rgba(20,40,160,.25);
+    }
+
+    .content {
+      margin-top: 14px;
+      padding-bottom: 84px;
+      overflow: auto;
+      scrollbar-width: none;
+      flex: 1 1 auto;
+    }
+    .content::-webkit-scrollbar { display: none; }
+
+    .intro {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .intro h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 10px;
+      color: #0B0B0F;
+    }
+
+    .intro p {
+      color: #6B7280;
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .bottom-nav {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 14px;
+      height: 68px;
+      border-radius: 28px;
+      background: rgba(255,255,255,.90);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(0,0,0,.065);
+      box-shadow: 0 14px 36px rgba(0,0,0,.10);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: center;
+      padding: 8px;
+      z-index: 25;
+    }
+    .nav-item {
+      border: 0;
+      background: transparent;
+      height: 52px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      gap: 2px;
+      color: var(--subtle);
+      font-size: 9px;
+      font-weight: 500;
+      padding: 4px 0;
+    }
+    .nav-item svg { width: 18px; height: 18px; stroke-width: 2.3; }
+    .nav-item.active { background: var(--blue-soft); color: var(--samsung-blue); }
+  </style>
+</head>
+<body>
+  <main class="phone" aria-label="Samsung Field App">
+    <div class="screen">
+      <div class="statusbar">
+        <span>09:41</span>
+        <span class="signal">5G <span class="battery"></span></span>
+      </div>
+
+      <header class="app-top">
+        <div class="brand">
+          <button class="logo-mark">S</button>
+          <div>
+            <small>Field Intelligence</small>
+            <strong>Samsung Field App</strong>
+          </div>
+        </div>
+        <button class="avatar"></button>
+      </header>
+
+      <section class="content">
+        <div class="intro">
+          <h1>Samsung Field App</h1>
+          <p>Shop Detail Demo - Store Profile & Staffing v20</p>
+          <p style="margin-top: 20px; font-size: 12px; color: #9CA3AF;">
+            ✓ Full-width flat Pin-to-pin filters<br>
+            ✓ Compact competitor driver table<br>
+            ✓ Sticky detail quick navigation<br>
+            ✓ Bottom nav Pro flat enterprise<br>
+            ✓ Store profile display & staffing
+          </p>
+        </div>
+      </section>
+
+      <nav class="bottom-nav">
+        <button class="nav-item active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.8 12 4.8l7.5 6v8.7a1.7 1.7 0 0 1-1.7 1.7H6.2a1.7 1.7 0 0 1-1.7-1.7v-8.7Z"/><path d="M9.5 21.2v-6.1h5v6.1"/></svg>
+          <span>Home</span>
+        </button>
+        <button class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M7.4 8.4V7a4.6 4.6 0 0 1 9.2 0v1.4"/><path d="M5.7 8.4h12.6l1 11.1a2 2 0 0 1-2 2.2H6.7a2 2 0 0 1-2-2.2l1-11.1Z"/><path d="M8.2 12.3h.01M15.8 12.3h.01"/></svg>
+          <span>Shop</span>
+        </button>
+        <button class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 20h15"/><path d="M6.2 16.7V11"/><path d="M10.1 16.7V6.8"/><path d="M14 16.7v-8"/><path d="M17.9 16.7v-4.9"/></svg>
+          <span>Market</span>
+        </button>
+        <button class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m3.5 9c.83 0 1.5-.67 1.5-1.5S16.33 8.5 15.5 8.5 14 9.17 14 10s.67 1.5 1.5 1.5m-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8.5 8.5 8.5 7 9.17 7 10s.67 1.5 1.5 1.5m3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+          <span>Visit</span>
+        </button>
+        <button class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+          <span>More</span>
+        </button>
+      </nav>
+    </div>
+  </main>
+
+  <script>
+    console.log('Samsung Field App v20 loaded successfully');
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "samsungfieldapp",
+  "version": "1.0.0",
+  "description": "Samsung Field Intelligence App - Shop listing & detail demo",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "build": "echo 'Static site - no build needed'",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "samsung",
+    "field",
+    "app",
+    "shop",
+    "retail"
+  ],
+  "author": "Samsung Retail Analytics",
+  "license": "MIT",
+  "private": true
+}
