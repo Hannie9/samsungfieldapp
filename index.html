@@ -4575,6 +4575,78 @@
     }
 
 
+
+    /* fix: lock shop-detail screen to vertical scroll only; keep quick navigation horizontally scrollable */
+    html,
+    body,
+    .phone,
+    .screen {
+      overscroll-behavior-x: none !important;
+    }
+
+    .screen,
+    .content,
+    .view,
+    #shopPage,
+    .detail-wrap,
+    .detail-section,
+    .pin-to-pin-section,
+    .pin-explorer--shortlist {
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+    }
+
+    .screen {
+      overflow-x: hidden !important;
+    }
+
+    .content {
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      overscroll-behavior-x: none !important;
+      touch-action: pan-y !important;
+    }
+
+    .view.active,
+    #shopPage,
+    .detail-wrap,
+    .detail-section,
+    .pin-to-pin-section,
+    .pin-explorer--shortlist {
+      overflow-x: hidden !important;
+    }
+
+    .detail-quick-nav {
+      overflow: hidden !important;
+      overscroll-behavior-x: contain !important;
+      touch-action: pan-x pan-y !important;
+    }
+
+    .detail-quick-nav-inner {
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      max-width: 100% !important;
+      overscroll-behavior-x: contain !important;
+      -webkit-overflow-scrolling: touch !important;
+      touch-action: pan-x pan-y !important;
+    }
+
+    .pin-filter-panel--compact {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 10px !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+      overflow-x: hidden !important;
+    }
+
+    .pin-chip-row,
+    .pin-chip-row.pin-chip-row--with-reset {
+      max-width: 100% !important;
+      min-width: 0 !important;
+    }
+
 </style>
 </head>
 <body>
